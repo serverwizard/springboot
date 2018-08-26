@@ -1,12 +1,16 @@
 package serverwizard.springboot.domain.user;
 
 import lombok.Getter;
+import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+@Setter
 @Getter
 @Entity
 public class User {
@@ -30,5 +34,6 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
     )
     private Set<Role> roles = new HashSet<>();
+
 }
 

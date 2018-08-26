@@ -1,13 +1,21 @@
 spring:
   jpa:
+#    하이버네이트 설정
     hibernate:
      ddl-auto: create-drop
+#    jpa 설정
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+
+# 이설정을 해주지 않더라도 h2를 사용하는 경우 스프링부트에서 자동으로 데이터소스를 만들어준다.
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
     username: sa
-    password:
+    password: sa
+
+  h2:
+    console:
+      enabled: true

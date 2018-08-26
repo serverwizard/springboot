@@ -4,9 +4,9 @@ insert into role (id, name)
   values(2, 'ROLE_ADMIN');
 
 insert into user (id, name, email, password, join_date)
-  values( 1, 'kim', 'urstory@gmail.com', '1234', now());
+  values( 1, 'kim', 'urstory@gmail.com', '{bcrypt}$2a$10$Iu9aek0vjbl.9MT7jkswretsyWQrzj0RIV2bY9e47Xsmgh58W4CSW', now());
 insert into user (id, name, email, password, join_date)
-  values( 2, 'kang', 'carami@gmail.com', '1234', now());
+  values( 2, 'kang', 'carami@gmail.com', '{bcrypt}$2a$10$Iu9aek0vjbl.9MT7jkswretsyWQrzj0RIV2bY9e47Xsmgh58W4CSW', now());
 
 insert into user_role(user_id, role_id)
   values(1, 1);
